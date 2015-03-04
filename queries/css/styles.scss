@@ -1,0 +1,144 @@
+*, *:before, *:after {
+	box-sizing: border-box
+}
+
+
+body {
+	background-color: red;
+}
+
+header {
+	nav {
+		ul {
+			&:before, &:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			li {
+				display: inline-block;
+				float: left;
+				width: 25%;
+			}
+		}
+	}
+}
+
+main {
+	section:first-of-type {
+		background-image: url(../img/MasterChief.jpg);
+		background-size: cover;
+		background-position: top center;
+		div:first-child {
+			width: 75%;
+			float: right;
+			color: white;
+			background-color: hsla(0, 0, 0, .5);
+		}
+		div:last-child {
+			width: 25%;
+			float: left;
+		}
+	}
+
+	section {
+		div:first-child, div:last-child {
+			width: 20%;
+			padding: 10px;
+			float: left;
+		}
+
+		
+	section:last-of-type {
+		div {
+			width: 60%;
+			padding: 10px;
+			float: left;
+		}
+
+		div:last-child {
+			width: 20%;
+			padding: 10px;
+			float: left;
+		}
+	}
+
+	
+	}
+
+	section:before, section:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+}
+ footer {
+	text-align: center;
+ }
+
+
+
+
+@media screen and (min-width: 500px) and (max-width: 756px){
+	header {
+		&:before, &:after {
+				content: "";
+				display: block;
+				clear: both;
+				text-align: center;
+			}
+	}
+
+	main {
+		section:first-of-type {
+			div:first-child {
+				width: 75%;
+			}
+			div:last-child {
+				width: 25%;
+			}
+		}
+
+		section {
+			div:first-child, div:last-child {
+				width: 20%;
+			}
+
+			div {
+				width: 60%;
+			}
+
+		section:last-of-type {
+			div:first-child {
+				width: 25%;
+			}
+			div:last-child {
+				width: 75%;
+			}
+		}
+	}
+
+@media screen and (max-width: 500px){
+	header {
+		nav {
+			ul {
+				li {
+					display: block;
+					width: 100%;
+					text-align: center;
+					padding: 10px 0;
+				}
+			}
+		}
+	}	
+	section {
+		div {
+			width: 100% !important;
+		}
+	}
+	.no-phone {
+		display: none;
+	}
+}
+
